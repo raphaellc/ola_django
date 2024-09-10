@@ -6,6 +6,26 @@ __pycache__/
 # C extensions
 *.so
 
+# Virtual Environment
+venv/
+Scripts/
+
+# Executables
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Django-specific files
+*.log
+local_settings.py
+db.sqlite3
+media/*
+
+# Compiled Python files
+__pycache__/
+*.pyc
+
 # Distribution / packaging
 .Python
 build/
@@ -106,10 +126,8 @@ ipython_config.py
 #pdm.lock
 #   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
 #   in version control.
-#   https://pdm.fming.dev/latest/usage/project/#working-with-version-control
+#   https://pdm.fming.dev/#use-with-ide
 .pdm.toml
-.pdm-python
-.pdm-build/
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
@@ -160,3 +178,4 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+pyvenv.cfg 
