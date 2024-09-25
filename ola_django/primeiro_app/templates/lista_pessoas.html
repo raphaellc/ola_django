@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Pessoas</title>
+</head>
+<body>
+    <h1>Pessoas Cadastradas</h1>
+
+    <ul>
+        {% for pessoa in object_list %}
+            <li>{{ pessoa.nome }} - {{ pessoa.idade }} anos - {{ pessoa.email }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

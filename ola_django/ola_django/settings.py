@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'primeiro_app',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'ola_django.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'oladjango',
+        'USER': 'root',        # Substitua pelo seu usuário MySQL
+        'PASSWORD': 'DevMySQ!',      # Substitua pela sua senha MySQL
+        'HOST': 'localhost',                # Ou o endereço do seu servidor MySQL
+        'PORT': '3306',                     # A porta padrão do MySQL'
     }
 }
 
