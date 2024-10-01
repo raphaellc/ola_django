@@ -24,6 +24,9 @@
                     <td>
                         <a href="{% url 'editar_pessoa' pessoa.id %}">Editar</a> 
                     </td>
+                    <td>
+                        <a href="{% url 'detalhe_pessoa' pessoa.id %}">Visualizar</a> 
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>
