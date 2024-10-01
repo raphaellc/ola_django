@@ -6,10 +6,27 @@
 <body>
     <h1>Pessoas Cadastradas</h1>
 
-    <ul>
-        {% for pessoa in object_list %}
-            <li>{{ pessoa.nome }} - {{ pessoa.idade }} anos - {{ pessoa.email }}</li>
-        {% endfor %}
-    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Email</th>
+                <th>Ações</th> 
+            </tr>
+        </thead>
+        <tbody>
+            {% for pessoa in object_list %}
+                <tr>
+                    <td>{{ pessoa.nome }}</td>
+                    <td>{{ pessoa.idade }}</td>
+                    <td>{{ pessoa.email }}</td>
+                    <td>
+                        <a href="{% url 'editar_pessoa' pessoa.id %}">Editar</a> 
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
