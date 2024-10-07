@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView, UpdateView, DetailView
+from django.views.generic import CreateView, ListView, UpdateView, DetailView, DeleteView
 from .models import Pessoa
-from .forms import PessoaCreateForm, PessoaUpdateForm 
+from .forms import PessoaCreateForm, PessoaUpdateForm, FormDeletePessoa 
 # Create your views here.
 #criação da tela de cadastro de pessoa
 class PessoaCreateView(CreateView):
@@ -24,4 +24,9 @@ class PessoaUpdateView(UpdateView):
 class PessoaDetailView(DetailView):
     model = Pessoa
     template_name = "detalhe_pessoa.html"
-    
+
+class PessoaDeleteView(DeleteView):
+    model = Pessoa
+    form_class = FormDeletePessoa
+    template_name = "deletar_pessoa.html"
+    success_url = reverse_lazy('lista_pessoas')
