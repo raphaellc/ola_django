@@ -12,6 +12,7 @@
                 <th>Nome</th>
                 <th>Idade</th>
                 <th>Email</th>
+                <th>Tipo Pessoa</th>
                 <th>Ações</th> 
             </tr>
         </thead>
@@ -21,6 +22,7 @@
                     <td>{{ pessoa.nome }}</td>
                     <td>{{ pessoa.idade }}</td>
                     <td>{{ pessoa.email }}</td>
+                    <td>{{ pessoa.tipo_pessoa }}</td>
                     <td>
                         <a href="{% url 'editar_pessoa' pessoa.id %}">Editar</a> 
                     </td>
